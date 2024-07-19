@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Copa América Pokémon Extinción</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                font-size: large;
+                margin: 0;
+                padding: 0;
+                background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEiTtHr_E1pf59YEdyPTQXlburSibiYNgsWdFQEFs8ZU09qZsFxFr2YCC7kMtS5KGYL1bFZ-k0buPJHh87cXGhdPLaWt92cz4rWdVvdrG6QwZ9_pf51i-YvO9q8O4YIWfZBEDRzrONZTmDln-FZSBCCFsrfX9-i5dtXUHFchyFAR2lH6OgUYus9TRBjfcm0Q'); /* Fondo de pantalla */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-color: rgba(240, 240, 240, 0.8); /* Fondo con opacidad */
+                scroll-behavior: smooth; /* Desplazamiento suave */
+            }
+    
+            header {
+                background-color: rgba(193, 196, 27, 0.8); /* Encabezado con opacidad */
+                color: #fff;
+                padding: 2%;
+                text-align: center;
+                transition: background-color 0.3s ease; /* Transición de color */
+            }
+            
+            header:hover {
+                background-color: rgba(24, 204, 33, 0.8); /* Cambio de color al pasar el cursor */
+            }
+    
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            nav ul li {
+                display: inline;
+                margin-right: 2%;
+                transition: transform 0.3s ease; /* Transición de transformación */
+            }
+            
+            nav ul li:hover {
+                transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+            }
+            
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease; /* Transición de color */
+            }
+            
+            nav ul li a:hover {
+                color: #ffd700; /* Cambio de color al pasar el cursor */
+            }
+    
+            .container{
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+
+            .llave {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+  
+            .partido {
+                display: flex;
+                align-items: center;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+  
+            .logo-equipo {
+                flex: 1;
+                text-align: center;
+            }
+  
+            .logo-equipo img {
+                width: auto;/* Ajusta el tamaño máximo de los logos según sea necesario */
+                height: 90px;
+            }
+  
+            .vs {
+                flex: 0 0 auto;
+                margin: 0 20px;
+            }
+  
+            .vs h2 {
+                font-size: 24px;
+                margin: 0;
+            }
+    
+            aside{
+                background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+                border-radius: 5px; /* Bordes redondeados */
+                padding: 10px; /* Relleno interno */
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+                margin-top: 20px; /* Margen superior */
+                width: 40%;
+                height: 100%;
+            }
+            
+            main {
+                padding: 2%;
+                width: 100%;
+                height: 100%;
+            }
+    
+            #video-container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            video {
+                width: 100%;
+                height: auto;
+            }
+    
+            section {
+                margin-bottom: 3%;
+                background-color: rgba(255, 255, 255, 0.8); /* Sección con opacidad */
+                border-radius: 10px;
+                padding: 2%;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease; /* Transición de transformación */
+            }
+            
+            section:hover {
+                transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+            }
+    
+            section h2 {
+                color: #333;
+                border-bottom: 2px solid #333;
+                padding-bottom: 1%;
+                margin-bottom: 2%;
+            }
+            
+            section p {
+                color: black;
+            }
+    
+            .container-carrusel {
+                width: 100%;
+                overflow: hidden;
+                margin-top: 20px;
+            }
+    
+            .carrusel {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+    
+            .carrusel-item {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 100%;
+                margin-right: 20px;
+            }
+            
+            footer {
+                background-color: rgba(193, 196, 27, 0.8); /* Pie de página con opacidad */
+                color: #fff;
+                text-align: center;
+                padding: 1%;
+                bottom: 0;
+                width: 100%;
+            }
+    
+            footer:hover{
+                background-color: rgba(24, 204, 33, 0.8);
+            }
+    
+            footer a {
+                color: #fff; /* Color del texto */
+                text-decoration: none; /* Quita el subrayado */
+                transition: color 0.3s ease; /* Transición de color */
+            }
+    
+            footer a:hover {
+                color: #ffd700; /* Cambio de color al pasar el cursor */
+            }
+            
+            /* Estilos para los iconos de contacto */
+            .contact-info i {
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+          <h1>Copa América Pokémon Extinción</h1>
+          <nav>
+            <ul>
+              <li><a href="index.html">Final</a></li>
+              <li><a href="index2.html">Ecuador</a></li>
+              <li><a href="index3.html">México</a></li>
+              <li><a href="index4.html">Historia</a></li>
+              <li><a href="index5.html">Semifinales</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="container">
+          <main>
+            <section id="inicio">
+              <h2>Final</h2>
+              <div class="partido">
+                <div class="logo-equipo">
+                  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjsK5h-d8OGzi6ThgTmv4E-1xhsyOuQj8FjrP9ZjkQwHshQ61jlCTOJG8I6nnTxgE64go4ZwpomyJNoMGgQTJXJBE6srvOhG1y13ag0ku45znu8z-cfMIs-kiovfBO1zBCasMmCfZF4VDLLbwdhULQ-skAZ1WBxJgFfv6puSpG8QgXTEln4W-el-don1tya" alt="Logo Equipo X">
+                  <h2>México</h2>
+                </div>
+                <div class="vs">
+                  <h1>VS</h1>
+                </div>
+                <div class="logo-equipo">
+                  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjtN04ys0kGSXvzMEStP3IzM0ogXJgzhqnIJwn_CkqSwa3Uv6BpOENNve7BwjM-yS3dFcwO1WQd0XEsOz3YGgcN-58QCggwTBGiapu61SdQ10G96XGtRGPggWhw6Qkwbl2AhAz_BRyEBJ_b9gMRzkDVut3cyosjSB5E35ncnY8RgeddWUC23psQ8fef8b66" alt="Logo Equipo Y">
+                  <h2>Ecuador</h2>
+                </div>
+              </div>
+            </section>
+            <section id="inicio">
+                <h2>Arbitraje</h2>
+                <h4>Arbitro Central</h4>
+                <p>Luigi Rivera</p>
+                <h4>Abanderados y Var</h4>
+                <p>Chava Medina</p>
+                <p>Alfredo Preza</p>
+                <h2>Transmición</h2>
+                <p>La transmisiones serán a cargo de Azteca Extinción para México y de EcuaExtinción para Ecuador, las narraciones serán hechas por Chava Martinoli</p>
+            </section>
+          </main>
+        </div>
+        <footer>
+          <p>Unete al grupo en: <a href="https://www.facebook.com/share/maVUNCfV7ZzDuK6e/?mibextid=A7sQZp"><i class="fab fa-facebook"></i></a></p>
+        </footer>
+    </body>
+</html>

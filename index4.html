@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Copa América Pokémon Extinción</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                font-size: large;
+                margin: 0;
+                padding: 0;
+                background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEiTtHr_E1pf59YEdyPTQXlburSibiYNgsWdFQEFs8ZU09qZsFxFr2YCC7kMtS5KGYL1bFZ-k0buPJHh87cXGhdPLaWt92cz4rWdVvdrG6QwZ9_pf51i-YvO9q8O4YIWfZBEDRzrONZTmDln-FZSBCCFsrfX9-i5dtXUHFchyFAR2lH6OgUYus9TRBjfcm0Q'); /* Fondo de pantalla */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-color: rgba(240, 240, 240, 0.8); /* Fondo con opacidad */
+                scroll-behavior: smooth; /* Desplazamiento suave */
+            }
+    
+            header {
+                background-color: rgba(193, 196, 27, 0.8); /* Encabezado con opacidad */
+                color: #fff;
+                padding: 2%;
+                text-align: center;
+                transition: background-color 0.3s ease; /* Transición de color */
+            }
+            
+            header:hover {
+                background-color: rgba(24, 204, 33, 0.8); /* Cambio de color al pasar el cursor */
+            }
+    
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            nav ul li {
+                display: inline;
+                margin-right: 2%;
+                transition: transform 0.3s ease; /* Transición de transformación */
+            }
+            
+            nav ul li:hover {
+                transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+            }
+            
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease; /* Transición de color */
+            }
+            
+            nav ul li a:hover {
+                color: #ffd700; /* Cambio de color al pasar el cursor */
+            }
+    
+            .container{
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+
+            .llave {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+  
+            .partido {
+                display: flex;
+                align-items: center;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+  
+            .logo-equipo {
+                flex: 1;
+                text-align: center;
+            }
+  
+            .logo-equipo img {
+                width: auto;/* Ajusta el tamaño máximo de los logos según sea necesario */
+                height: 90px;
+            }
+  
+            .vs {
+                flex: 0 0 auto;
+                margin: 0 20px;
+            }
+  
+            .vs h2 {
+                font-size: 24px;
+                margin: 0;
+            }
+    
+            aside{
+                background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+                border-radius: 5px; /* Bordes redondeados */
+                padding: 10px; /* Relleno interno */
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+                margin-top: 20px; /* Margen superior */
+                width: 40%;
+                height: 100%;
+            }
+            
+            main {
+                padding: 2%;
+                width: 100%;
+                height: 100%;
+            }
+    
+            #video-container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            video {
+                width: 100%;
+                height: auto;
+            }
+    
+            section {
+                margin-bottom: 3%;
+                background-color: rgba(255, 255, 255, 0.8); /* Sección con opacidad */
+                border-radius: 10px;
+                padding: 2%;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease; /* Transición de transformación */
+            }
+            
+            section:hover {
+                transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+            }
+    
+            section h2 {
+                color: #333;
+                border-bottom: 2px solid #333;
+                padding-bottom: 1%;
+                margin-bottom: 2%;
+            }
+            
+            section p {
+                color: black;
+            }
+    
+            .container-carrusel {
+                width: 100%;
+                overflow: hidden;
+                margin-top: 20px;
+            }
+    
+            .carrusel {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+    
+            .carrusel-item {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 100%;
+                margin-right: 20px;
+            }
+            
+            footer {
+                background-color: rgba(193, 196, 27, 0.8); /* Pie de página con opacidad */
+                color: #fff;
+                text-align: center;
+                padding: 1%;
+                bottom: 0;
+                width: 100%;
+            }
+    
+            footer:hover{
+                background-color: rgba(24, 204, 33, 0.8);
+            }
+    
+            footer a {
+                color: #fff; /* Color del texto */
+                text-decoration: none; /* Quita el subrayado */
+                transition: color 0.3s ease; /* Transición de color */
+            }
+    
+            footer a:hover {
+                color: #ffd700; /* Cambio de color al pasar el cursor */
+            }
+            
+            /* Estilos para los iconos de contacto */
+            .contact-info i {
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Copa América Pokémon Extinción</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Final</a></li>
+                    <li><a href="index2.html">Ecuador</a></li>
+                    <li><a href="index3.html">México</a></li>
+                    <li><a href="index4.html">Historia</a></li>
+                    <li><a href="index5.html">Semifinales</a></li>
+                  </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <main>
+              <section id="inicio">
+                <h2>Antecedente Historico</h2>
+                <div class="partido">
+                  <div class="logo-equipo">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjsK5h-d8OGzi6ThgTmv4E-1xhsyOuQj8FjrP9ZjkQwHshQ61jlCTOJG8I6nnTxgE64go4ZwpomyJNoMGgQTJXJBE6srvOhG1y13ag0ku45znu8z-cfMIs-kiovfBO1zBCasMmCfZF4VDLLbwdhULQ-skAZ1WBxJgFfv6puSpG8QgXTEln4W-el-don1tya" alt="Logo Equipo X">
+                    <h2>México</h2>
+                  </div>
+                  <div class="vs">
+                    <h2>VS</h2>
+                  </div>
+                  <div class="logo-equipo">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjtN04ys0kGSXvzMEStP3IzM0ogXJgzhqnIJwn_CkqSwa3Uv6BpOENNve7BwjM-yS3dFcwO1WQd0XEsOz3YGgcN-58QCggwTBGiapu61SdQ10G96XGtRGPggWhw6Qkwbl2AhAz_BRyEBJ_b9gMRzkDVut3cyosjSB5E35ncnY8RgeddWUC23psQ8fef8b66" alt="Logo Equipo Y">
+                    <h2>Ecuador</h2>
+                  </div>
+                </div>
+                <h3>Antecedentes Historicos</h3>
+                <p>México y Ecuador se han enfrentado en 2 ocasiones con un saldo favorable para los Méxicanos.</p>
+                <p>En la primera edición se enfrentarón en la jornada 2 con un marcador de 4-2 para los mexicanos donde hubo una izzi en vgc encontra de los mexicanos que al final no afecto al resultado, en está segunda edición se enfrentarón en la jornada 5 donde repartieron puntos con un marcador de 3-3</p>
+                <p>Los jugadores que han aparecido en los 2 partidos que se han jugadon han sido PJ CV y Juan Carlos Farias Meza por parte de Ecuador siendo este ultimo anotador en las dos ocasiones y por parte de México los jugadores que estuvieron en los 2 partido son Juan Vicencio, Alvaro Valenzuela y Victor Uria, los tres marcando gol en ambos juegos</p>
+                <h3>Paso por la competición actual</h3>
+                <h4>México</h4>
+                <p>México en la primera edición llego a la final contra Perú dirigido por Angel Arroniz, en esta final México empataba por segunda ocasión ante Perú pero en el juego de desempate perdían la final</p>
+                <p>Esa situación llevo a México a un nuevo y mejorado proceso selctivo con 3 DT con diferente mentalidad pero con ganas de ganar, Luis D. Ramirez que ganó un campeonato con Manchester United en la NeoLiga, Karla Cervantes que de recien ganar un campeonato con Marowaks en UT Legends llegó al grupo de DTs para la selección mexicana, Alexis 'Tata' Valdivia que ha tenido experiencia en distintos torneos</p>
+                <p>México en el torneo actual llega con 3 victorias 1 empate y 2 derrotas en fase de grupos y con victoria en semifinales ante Centroamérica</p>
+                <h4>Ecuador</h4>
+                <p>Ecuador en la primera edición quedo en el quinto puesto lo que no le alcanzó para meterse a semifinales en aquella ocasión</p>
+                <p>Actualmente diversos jugadores de la selección de Ecuador han tenido participación individual y colectiva en torneos oficiales de región por lo que no es casualidad que Ecuador este en la final de la segunda edición de Copa América, a principios del torneo pasaron un interinato que parecía ponerlos en complicaciones pero Alvarez Guillermo ha demostrado lo que vale en su primera ocasión dirigiendo</p>
+                <p>Ecuador en el torneo actual llega con 1 victoria, 5 empates y 0 derrotas en fase de grupos y con victoria en semifinales ante el vigente campeón Perú</p>
+                <h3>Conclusión</h3>
+                <p>Ambas selección tienen antecedentes para hacer que el partido se vuelva interesante, ¿México logrará romper el invicto ecuatoriano? o ¿Ecuador logrará la hazaña de ser campeón con 0 derrotas?</p>
+              </section>
+            </main>
+          </div>
+        <footer>
+          <p>Unete al grupo en: <a href="https://www.facebook.com/share/maVUNCfV7ZzDuK6e/?mibextid=A7sQZp"><i class="fab fa-facebook"></i></a></p>
+        </footer>
+    </body>
+</html>
